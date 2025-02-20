@@ -43,11 +43,11 @@ findCommonWords = function(theGrids){
 # and has a decent number of frequently used consonants.
 
 theGuess = "RAISE"
-theResult=list("YYXXG","XXXXY","YXGXY","XXXGG")
+theResult=list("XGXYX","YYXXG","XXYYX","YYXXG")
 theGrids = elimQuadGrid(theGrids,theGuess,theResult)
 
 theGuess = "DOUBT"
-theResult=list("GXXXX","GYXXY","YXXXX","XGXXX")
+theResult=list("XXXXY","GXXXX","XXYXX","XXXXX")
 theGrids = elimQuadGrid(theGrids,theGuess,theResult)
 
 # eliminateWords(theGrids[[1]],theGuess,theResult[[1]])
