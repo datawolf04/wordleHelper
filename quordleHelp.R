@@ -82,6 +82,7 @@ playQuordle = function(){
       }
     }
   }
+  cat("\n\nCongratulations, you win!\n\n")
 }
 
 #############################################################
