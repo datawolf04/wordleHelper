@@ -58,5 +58,29 @@ eliminateWords = function(grid, guess, result){
   return(grid)
 }
 
-# remain = eliminateWords(wordGrid,"RANGE","XGXGG")
-# remain
+enterGuess = function(){
+  guess = readline(prompt="Enter guess ")
+  return(guess)
+}
+enterResult = function(){
+  result = readline(prompt = "Enter result ")
+  return(result)
+}
+
+playWordle = function(){
+  thisGrid = wordGrid
+  gridLength = length(thisGrid)/5
+  while(gridLength>1){
+    theGuess = enterGuess()
+    theResult = enterResult()
+    thisGrid = eliminateWords(thisGrid,theGuess,theResult)
+    gridLength = length(thisGrid)/5
+    print(paste("There are",gridLength,"grids remaining"))
+    if(gridLength > 20){
+      print(head(thisGrid))
+    } else {
+      print(thisGrid)
+    }
+  }
+  cat("\n\nCongratulations, you win!\n\n")
+}
