@@ -62,7 +62,7 @@ enterGuess = function(){
   guess = readline(prompt="Enter guess ")
   return(guess)
 }
-enterResult = function(){
+enterTheResult = function(){
   result = readline(prompt = "Enter result ")
   return(result)
 }
@@ -72,10 +72,10 @@ playWordle = function(){
   gridLength = length(thisGrid)/5
   while(gridLength>1){
     theGuess = enterGuess()
-    theResult = enterResult()
+    theResult = enterTheResult()
     thisGrid = eliminateWords(thisGrid,theGuess,theResult)
     gridLength = length(thisGrid)/5
-    print(paste("There are",gridLength,"grids remaining"))
+    print(paste("There are",gridLength,"words remaining"))
     if(gridLength > 20){
       print(head(thisGrid))
     } else {
